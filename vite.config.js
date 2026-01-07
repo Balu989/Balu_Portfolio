@@ -5,6 +5,8 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   build: {
+    outDir: 'dist',
+    sourcemap: false,
     rollupOptions: {
       output: {
         manualChunks: {
@@ -15,8 +17,7 @@ export default defineConfig({
     },
     minify: 'esbuild',
     cssCodeSplit: true,
-    sourcemap: false,
-    chunkSizeWarningLimit: 500
+    chunkSizeWarningLimit: 1000
   },
   server: {
     open: true
