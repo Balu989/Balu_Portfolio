@@ -20,6 +20,6 @@ export default defineConfig({
     chunkSizeWarningLimit: 1000
   },
   server: {
-    open: true
+    middlewareMode: false
   }
 });
